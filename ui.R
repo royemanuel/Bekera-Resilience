@@ -3,7 +3,7 @@ shinyUI(fluidPage(
     titlePanel("Bekera Resilience Factor (Bekera 2014)"),
     sidebarLayout(
         sidebarPanel(
-            sliderInput("slackTime", "Time in Years:", min=0, max=10,
+            sliderInput("slackTime", "Slack Time:", min=0, max=10,
                         value=1, step=.5),
             sliderInput("tStar","Time to Complete Initial Recovery Actions", min=0,
                         max=20, value=5, step=0.5),
@@ -19,7 +19,8 @@ shinyUI(fluidPage(
                         value=1.0, step=0.05)
         ),
         mainPanel(
-            plotOutput("Fd.v.rho")
+            plotOutput("Fd.v.rho")#,
+#            plotOutput("a.v.rho")
         )
     )
 ))
