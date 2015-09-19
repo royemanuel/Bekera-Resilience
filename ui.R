@@ -19,8 +19,8 @@ shinyUI(fluidPage(
                         value=1.0, step=0.05)
         ),
         mainPanel(
-            plotOutput("Fd.v.rho")#,
-#            plotOutput("a.v.rho")
+            plotOutput("Fd.v.rho"),
+            plotOutput("a.v.rho")
         )
     )
 ))

@@ -24,18 +24,18 @@ shinyServer(function(input, output){
             scale_y_continuous("Resilience Factor")
         print(p)
     })
-#    output$a.v.rho <- renderPlot({
-#        q <- ggplot(data.frame(x=c(0,1.5)), aes(x)) +
-#            stat_function(fun=function(x)rho(slackTime=input$slackTime,
-#                              tStar=input$tStar,
-#                              tF=input$tF,
-#                              a=x,
-#                              Fd=input$Fd,
-#                              Fi=input$Fi,
-#                              Fr=input$Fr))
-#        q <- q + scale_x_continuous("Degradation Factor") +
-#            scale_y_continuous("Rho")
-#        print(q)
-#    })
+    output$a.v.rho <- renderPlot({
+        q <- ggplot(data.frame(x=c(0,1.5)), aes(x)) +
+            stat_function(fun=function(x)rho(slackTime=input$slackTime,
+                              tStar=input$tStar,
+                              tF=input$tF,
+                              a=x,
+                              Fd=input$Fd,
+                              Fi=input$Fi,
+                              Fr=input$Fr))
+        q <- q + scale_x_continuous("Degradation Factor") +
+            scale_y_continuous("Rho")
+        print(q)
+    })
     }
             )
